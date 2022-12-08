@@ -33,8 +33,17 @@
         </table>
     </div>
 </template>
+
 <script>
+    import countries from "../../public/countries.json";
+    
 export default {
+    data (){
+        return{
+        countries:countries,
+    }
+
+   },
     computed: {
         country() {
 
@@ -44,4 +53,8 @@ export default {
         // NO se tiene que hacer en mounted
         console.log(this.$route.params)
     }
+
+ 
+
+
 }</script>
